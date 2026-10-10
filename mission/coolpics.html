@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cool Pics</title>
     <link rel="stylesheet" href="coolpics.css">
+    <script src="coolpics.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -21,6 +23,7 @@
 <main>
 <h2>Current Work</h2>
 
+<section class="gallery">
 <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="landscape">
 <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="landscape">
 <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="landscape">
@@ -30,6 +33,13 @@
 <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="landscape">
 <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="landscape">
 <img src="https://wddbyui.github.io/wdd131/images/norris-sm.jpg" alt="landscape">
+</section>
+
+<dialog id="image-viewer">
+    <button class="close-viewer">X</button>
+    <img id="full-image" src="" alt="">
+</dialog>
+
 
 </main>
  <footer>
