@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    line-height: 1;
+}
+
+header, footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 10px;
+    border-bottom: 2px solid #e8b887;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #e8b887;
+}
+
+nav a {
+    color: #b30030;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+article {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 1rem;
+    border-bottom: 2px solid #e8b887;
+}
+
+.book-details {
+    text-align: right;
+    padding: 10px;
+}
+
+.book-details p {
+    margin: 5px;
+}
+
+.book-content h2 {
+    color: #b30030;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+}
+
+.book-content img {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.book-content p {
+    font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+    article {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 20px;
+    }
+
+    .book-details {
+        border-right: 1px solid #e8b887;
+        padding-right: 20px;
+    }
+
+    .book-content img {
+        width: 150px;
+    }
+}
