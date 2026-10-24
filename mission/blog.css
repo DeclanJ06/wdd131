@@ -42,19 +42,24 @@ article {
     border-bottom: 2px solid #e8b887;
 }
 
-.book-details {
+.descrition {
     text-align: right;
     padding: 10px;
+}
+.book-details {
+    text-align: right;
+    padding: 0 25px 10px 0;
 }
 
 .book-details p {
     margin: 5px;
 }
 
-.book-content h2 {
+h2 {
     color: #b30030;
     font-family: Georgia, serif;
     font-size: 1.2rem;
+    margin: 15px 0 12px;
 }
 
 .book-content img {
