@@ -1,32 +1,34 @@
-const form = document.querySelector("#eventTicket");
-const type = document.querySelector("#type");
-const studentContainer = document.querySelector("#studentContainer");
-const guestContainer = document.querySelector("#guestContainer");
-const output = document.querySelector("#output");
 
-function updateFields() {
-  const type = type.value;
+const form = document.querySelector(`#eventTicket`);
+const travelRange = document.querySelector(`#travelRange`);
+const studentContainer = document.querySelector(`#studentContainer`);
+const guestContainer = document.querySelector(`#guestContainer`);
 
+// listen for the form submission
 form.addEventListener('submit', (event) => {
 
+    // prevent the page from refreshing
     event.preventDefault();
 
     console.log(form.firstName.value);
 
 });
 
-if(studentContainer.length == 9) {
-    output.textContent = "Student I# must be 9 digits long.";
-    return;
-  }
+travelRange.addEventListener('change', () => {
 
-  studentContainer.hidden = type !== "one";
+    if (travelRange.value === 'one') {
+        studentContainer.hidden = false;
+        guestContainer.hidden = true;
+    }
 
-  guestContainer.hidden = type !== "many";
-}
+    else if (travelRange.value === 'many') {
+        studentContainer.hidden = true;
+        guestContainer.hidden = false;
+    }
+    else {
+        studentContainer.hidden = true;
+        guestContainer.hidden = true;
+    }
 
-type.addEventListener("change", updateFields);
-updateFields();
-
-
+});
 
