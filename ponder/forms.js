@@ -68,9 +68,19 @@ form.addEventListener("submit", function (event) {
 
   // Validate the input
   // Let the user know to select at least one campus
+  if(selectedCampuses.length == 0) {
+    // add an error message
+    output.textContent = "Please select at least one campus";
+    // exit function so the rest of the form doesn't submit
+    return;
+  }
 
   
   // Let the user know if they choose many campuses but didn't put a note that they need to add a note
+  if(type === 'many' && selectedCampuses.length < 2) {
+    output.textContent = 'Please select two or more campuses';
+    return;
+  }
 
   
   //Let the user know if they choose many campus but only had one campus selected that they need to choose at least two campuses
