@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="View a character's stats and abilities.">
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="View a character's stats and abilities.">
+    <meta name="twitter:image" content="https://andejuli.github.io/wdd131/character_card/snortleblat.webp">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="character.css">
+    <script src="character.js" defer></script>
+</head>
+
+<body>
+
+    <main class="card">
+        <img class="image" id="character-image" src="" alt="Character">
+
+        <h1 class="name" id="character-name"></h1>
+
+        <div class="stats">
+            <p>Class: <span id="character-class"></span></p>
+            <p>Level: <span id="character-level"></span></p>
+            <p>Health: <span id="character-health"></span></p>
+        </div>
+
+        <div class="buttons">
+            <button id="attacked">Attacked</button>
+            <button id="level-up">Level Up</button>
+        </div>
+    </main>
+
+</body>
+</html>
