@@ -71,36 +71,19 @@ const hikes = [
   }
 ];
                 
-// Story- When user clicks button, display hikes that match what they type.
-
-// 1. Event listener on button.
 document.querySelector("#searchButton").addEventListener("click", e => {
 
-// 2. Grab what they typed.
 const userInput = document.querySelector("#search").value.toLowerCase();
 console.log(userInput);
 
-// 3. Filter array by matching what they typed.
 const Filteredhikes = hikes.filter(hike => {
     return hike.name.toLowerCase().includes(userInput);
 });
 
-// 3.1 sort filtered aray by difficulty
 const sortedHikes = Filteredhikes.sort(sortHikes);
 
-// 4. Display filtered results.
 sortedHikes.forEach(function(hike){
       renderHike(hike);
     })
 
 })
-
-// custom sort
-function sortHikes(a, b) {
-    if(a.difficulty < b.difficulty) {
-        return -1;
-    } else if(a.difficulty > b.difficulty) {
-        return 1;
-    }
-    return 0;
-}
