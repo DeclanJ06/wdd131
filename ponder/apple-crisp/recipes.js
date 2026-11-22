@@ -306,26 +306,6 @@ function getStarRating(rating) {
     return stars;
 }
 
-function createRecipeHTML(recipe) {
-    return `
-        <article class="recipe-card">
-            <img class="recipe-image" src="${recipe.image}" alt="${recipe.name}">
-
-            <div class="recipe-info">
-                <p class="tag">${recipe.tags.join(', ')}</p>
-
-                <h2>${recipe.name}</h2>
-
-                <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-                    ${getStarRating(recipe.rating)}
-                </span>
-
-                <p class="description">${recipe.description}</p>
-            </div>
-        </article>
-    `;
-}
-
 
 function displayRecipes(recipeList) {
     recipeContainer.className = 'recipe-results';
