@@ -315,7 +315,6 @@ function displayRecipes(recipeList) {
         return;
     }
 
-    recipeContainer.innerHTML = recipeList.map(createRecipeHTML).join('');
 }
 
 
